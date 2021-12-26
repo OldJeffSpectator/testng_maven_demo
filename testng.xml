@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/17244/idea_projects/TestNG_demo_maven">
+
+        <classes>
+            <class name="TestString"></class>
+            <!-- <class name="TestMath"></class> -->
+        </classes>
+
+    </test>
+
+    <test name="parameter test">
+        <parameter name="val_1" value="5"></parameter>
+        <parameter name="val_2" value="6"></parameter>
+        <classes>
+            <class name="TestMath"></class>
+        </classes>
+
+    </test>
+
+    <test name = "group test">
+        <groups>
+            <run>
+                <include name="group_1" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestMath"></class>
+            <class name="TestString"></class>
+        </classes>
+    </test>
+</suite>
